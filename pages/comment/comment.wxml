@@ -1,0 +1,57 @@
+<view class="wx-view_section">
+    <view class="page__hd">
+        <view class="page__title">用户短评</view>
+    </view>
+    <scroll-view class="  wx-scroll-view_actors" lower-threshold="50" scroll-y="True" style="overflow-x: auto; overflow-y: auto; " upper-threshold="50">
+        <view class="wx-view_grm9lE" > 
+            <view class="wx-view_comment_item" >
+                <image class="userinfo-avatar" mode="aspectFit" src="../../images/userIcon.png"/>
+                <text class="wx-text_71u3gA">  boilingCapucinoooo </text>  
+                <text>好评好评好评好评好评差评差评差评差评差评差评差评差评差评差评差评评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</text>
+                <view class="comment_operate">
+                    <text class="listitem_creattime">   2016.10.31  </text>
+                </view>
+            </view> 
+            <view class="wx-view_comment_item" >
+                <image class="userinfo-avatar" mode="aspectFit" src="../../images/userIcon.png"/>
+                <text class="wx-text_71u3gA">  boilingCapucinoooo </text>  
+                <text>好评好评好评好评好评差评差评差评差评差评差评差评差评差评差评差评评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</text>
+                <view class="comment_operate">
+                    <text class="listitem_creattime">   2016.10.31  </text>
+                </view>
+            </view> 
+            <view class="wx-view_comment_item" >
+                <image class="userinfo-avatar" mode="aspectFit" src="../../images/userIcon.png"/>
+                <text class="wx-text_71u3gA">  boilingCapucinoooo </text>  
+                <text>好评好评好评好评好评差评差评差评差评差评差评差评差评差评差评差评评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</text>
+                <view class="comment_operate">
+                    <text class="listitem_creattime">   2016.10.31  </text>
+                </view>
+            </view> 
+            <view class="wx-view_comment_item" >
+                <image class="userinfo-avatar" mode="aspectFit" src="../../images/userIcon.png"/>
+                <text class="wx-text_71u3gA">  boilingCapucinoooo </text>  
+                <text>好评好评好评好评好评差评差评差评差评差评差评差评差评差评差评差评评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</text>
+                <view class="comment_operate">
+                    <text class="listitem_creattime">   2016.10.31  </text>
+                </view>
+            </view> 
+            <view class="wx-view_comment_item" >
+                <image class="userinfo-avatar" mode="aspectFit" src="../../images/userIcon.png"/>
+                <text class="wx-text_71u3gA">  boilingCapucinoooo </text>  
+                <text>好评好评好评好评好评差评差评差评差评差评差评差评差评差评差评差评评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</text>
+                <view class="comment_operate">
+                    <text class="listitem_creattime">   2016.10.31  </text>
+                </view>
+            </view> 
+            <view class="wx-view_comment_item" >
+                <image class="userinfo-avatar" mode="aspectFit" src="../../images/userIcon.png"/>
+                <text class="wx-text_71u3gA">  boilingCapucinoooo </text>  
+                <text>好评好评好评好评好评差评差评差评差评差评差评差评差评差评差评差评评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评</text>
+                <view class="comment_operate">
+                    <text class="listitem_creattime">   2016.10.31  </text>
+                </view>
+            </view> 
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,23 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">已发优惠券</view>
+    </view>
+
+    <scroll-view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+                <view class="weui-cells__title">{{item.time}}</view>
+                <view class="weui-cells__title orderDelivering">待领取</view>
+                <navigator url="detail/detail">
+                    <view class="kind-list__item weui-cells weui-cells_after-title">
+                        <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+                            <image class="kind-list__img" src="../../images/{{item.id}}.png"></image>
+                            <view class="weui-flex__item">{{item.name}}</view>
+                            <view class="weui-cell__ft weui-cell__ft_in-access">点击详情</view>
+                        </view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </scroll-view>
+</view>

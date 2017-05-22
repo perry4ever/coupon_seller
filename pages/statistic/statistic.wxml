@@ -1,0 +1,31 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">统计数据</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">本年度销售额</view>
+                <view class="weui-cell__ft">￥14514541.56</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">本季度销售额</view>
+                <view class="weui-cell__ft">￥321455.98</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">本月销售额</view>
+                <view class="weui-cell__ft">￥48776.11</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">本日销售额</view>
+                <view class="weui-cell__ft">￥6786.32</view>
+            </view>
+        </view>
+    </view>
+</view>

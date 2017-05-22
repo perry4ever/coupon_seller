@@ -1,0 +1,17 @@
+.userinfo-avatar {
+	width: 80rpx;
+	height: 80rpx;
+	margin: 20rpx;
+	border-radius: 50%;
+}
+
+.wx-view_comment_item{display: block; flex-direction: column; width: 700rpx; justify-content: center; margin-left: 10px; margin-right: 10px; flex-grow: 0; flex-shrink: 0; flex-basis: auto; }
+.wx-text_71u3gA{font-size: 12px; color: rgb(27, 91, 166);  display: block;}
+.comment_operate{display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.listitem_creattime{font-size: 12px; color: rgb(186, 186, 186); padding-right: 2px; }
+.wx-text_section_title{font-weight: 600; margin-bottom: 20px; }
+
+
+
+
+

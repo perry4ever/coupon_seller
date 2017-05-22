@@ -1,0 +1,43 @@
+<view class="weui-panel weui-panel_access">
+    <view class="page__bd">
+
+        <view class="btn-plus" bindtap="tapAdd">
+            <image class="icon" src="../../images/Ui_Image_plus_slcted.png" />
+            <text>新增项目</text>
+        </view>
+        <view class="kind-list">
+            <block wx:for-items="{{goodslist}}" wx:key="{{item.id}}">
+                <view class="weui-panel__bd">
+                    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="navigateTo" >
+                            <image class="weui-media-box__thumb" src="../../images/3.jpg" />
+                            
+                        </view>
+                        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                            <view class="weui-media-box__title">{{item.name}}</view>
+                            <view class="weui-media-box__desc">
+                                <text class="text-orangered">{{item.price}}</text>
+                            </view>
+                            <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="onTapEdit">编辑</button>
+                            <button class="weui-btn mini-btn" type="warn" size="mini" bindtap="del">删除</button>
+                            <view class="quantity-wrapper" wx:if="{{ canEdit }}">
+                                <view class="customize-qua">
+                                    <view class="quantity-decrease" bindtap="decrease" data-id="{{ item._id }}" data-total="{{ item.total }}"></view>
+                                    <input class="quantity" type="number" data-id="{{ item._id }}" value="{{ item.total }}" bindinput="bindKeyInput" />
+                                    <view class="quantity-increase" bindtap="increase" data-id="{{ item._id }}" data-total="{{ item.total }}"></view>
+                                </view>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+    
+            </block>
+        </view>
+                    
+    </view>
+</view>
+
+
+
+
+

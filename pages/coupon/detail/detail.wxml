@@ -1,0 +1,62 @@
+<view class="  wx-view_movie_top">
+    <image class="wx-image_movie_cover" src="../../../images/manzhe.png"/>
+</view>
+<view class="  wx-view_movie_info">
+    <text class="wx-text_title">满100元打7折
+    </text>
+    <text class="wx-text_description">店内消费任意商品满100元打7折
+    </text>
+</view>
+
+<view class="wx-view_section">
+    <text class="wx-text_section_title">优惠券ID范围</text>
+    <text class="wx-text_description wx-txt_des_sup">121~300</text>
+</view>
+
+<view class="wx-view_section">
+    <text class="wx-text_section_title">优惠券发行总数</text>
+    <text class="wx-text_description wx-txt_des_sup">180</text>
+</view>
+
+<view class="wx-view_section">
+    <text class="wx-text_section_title">已发出总数</text>
+    <text class="wx-text_description wx-txt_des_sup">180</text>
+</view>
+
+<view class="wx-view_section">
+    <text class="wx-text_section_title">失效日期</text>
+    <text class="wx-text_description wx-txt_des_sup">2017-09-16</text>
+</view>
+
+<view class="wx-view_section">
+    <text class="wx-text_section_title">送券条件</text>
+    <text class="wx-text_description wx-txt_des_sup">历史消费满100</text>
+</view>
+
+
+<view class="page">
+    <scroll-view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <view class="kind-list__item">
+                <view class="weui-flex kind-list__item-hd {{openValue ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+                    <view class="weui-flex__item">{{name}}</view>
+                </view>
+                <view class="kind-list__item-bd {{openValue ? 'kind-list__item-bd_show' : ''}}">
+                    <view class="weui-cells {{openValue ? 'weui-cells_show' : ''}}">
+                        <block wx:for-items="{{pages}}" wx:for-item="page" wx:key="*item">
+                            <navigator url="../couponInfo/couponInfo" class="weui-cell weui-cell_access">
+                                <image class="kind-list__img_level2" src="../../../images/userIcon.png"></image>
+                                <view class="weui-cell__bd"></view>
+                                <view class="weui-cell__ft weui-cell__ft_in-access blueAdd">{{page.userName}}</view>
+                            </navigator>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+
+<view class="page">
+    <button class="weui-btn" type="warn">下线该优惠券</button>
+</view>

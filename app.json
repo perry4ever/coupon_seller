@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/coupon/coupon",
+    "pages/starUser/starUser",
+    "pages/coupon/addNew/addNew",
+    "pages/coupon/detail/detail",
+    "pages/management/management",
+    "pages/orderList/orderList",
+    "pages/myInfo/myInfo",
+    "pages/comment/comment",
+    "pages/statistic/statistic",
+    "pages/goods/addNew/addNew",
+    "pages/goods/edit/edit",
+    "pages/login/login",
+    "pages/welcome/welcome",
+    "pages/problems/problems",
+    "pages/aboutUs/aboutUs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Coupon That's Everlasting",
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/coupon/coupon",
+      "iconPath": "images/icon_nav_widget_default.png",
+      "selectedIconPath": "images/icon_nav_widget.png",
+      "text": "优惠券列表"
+    }, {
+      "pagePath": "pages/coupon/addNew/addNew",
+      "iconPath": "images/icon_nav_z-index_default.png",
+      "selectedIconPath": "images/icon_nav_z-index.png",
+      "text": "使用/发行"
+    }, {
+      "pagePath": "pages/management/management",
+      "iconPath": "images/Ui_Image_list.png",
+      "selectedIconPath": "images/Ui_Image_list_slcted.png",
+      "text": "店铺管理"
+    }, {
+      "pagePath": "pages/myInfo/myInfo",
+      "iconPath": "images/Ui_Image_user.png",
+      "selectedIconPath": "images/Ui_Image_user_slcted.png",
+      "text": "我的信息"
+    }]
+  },
+  "debug": false
+}

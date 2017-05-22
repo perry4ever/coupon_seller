@@ -1,0 +1,202 @@
+
+
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for-items="{{tabstop}}" wx:key="{{index}}">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndextop == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClicktop">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLefttop}}px; transform: translateX({{sliderOffsettop}}px); -webkit-transform: translateX({{sliderOffsettop}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndextop != 0}}">
+                    <view class="weui-cells__title">请输入优惠券ID</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cells weui-cells_after-title">
+                            <view class="weui-cell weui-cell_select">
+                                <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                                    <input class="weui-input" placeholder="ID" />
+                                </view>
+                            </view>
+                        </view>    
+                    </view>
+                    <view class="weui-cells__title">请输入用户名</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cells weui-cells_after-title">
+                            <view class="weui-cell weui-cell_select">
+                                <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                                    <input class="weui-input" placeholder="用户名" />
+                                </view>
+                            </view>
+                        </view>    
+                    </view>
+                    <button class="weui-btn" type="primary">点击验证</button>
+                    <button class="weui-btn" type="primary" bindtap="QRcodeTap">使用二维码验证</button>
+                </view>
+
+
+
+
+
+
+                <view class="weui-tab__content" hidden="{{activeIndextop != 1}}">
+                    <view class="weui-cells__title">请输入发行数量</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cells weui-cells_after-title">
+                            <view class="weui-cell weui-cell_select">
+                                <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                                    <input class="weui-input" placeholder="请在此输入发行数量" />
+                                </view>
+                            </view>
+                        </view>    
+                    </view>
+
+                    <view class="weui-cells__title">请选择新发行优惠券类型</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <radio-group bindchange="radioChange">
+                            <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="{{item.value}}">
+                                <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                                <view class="weui-cell__bd">{{item.name}}</view>
+                                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                                </view>
+                            </label>
+                        </radio-group>
+                    </view>
+
+
+
+                    <view class="weui-cells__title">请输入优惠券信息</view>
+                    <view class="weui-cells weui-cells_after-title" wx:if="{{nowType==0}}">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">满</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">减</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cells weui-cells_after-title" wx:if="{{nowType==1}}">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">满</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">打折</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cells weui-cells_after-title" wx:if="{{nowType==2}}">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">代金</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cells weui-cells_after-title" wx:if="{{nowType==3}}">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">买</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">送</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入"/>
+                            </view>
+                        </view>
+                    </view>
+
+
+
+                    <view class="weui-tab">
+                        <view class="weui-navbar">
+                            <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                                    <view class="weui-navbar__title">{{item}}</view>
+                                </view>
+                            </block>
+                            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                        </view>
+                        <view class="weui-tab__panel">
+                            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                                <view class="weui-cells__title">请输入送券条件</view>
+                                <view class="weui-cells weui-cells_after-title">
+                                    <view class="weui-cell weui-cell_select">
+                                        <view class="weui-cell__hd" style="width: 200px">
+                                            <picker bindchange="bindIssuingConditionChange" value="{{issuingConditionIndex}}" range="{{issuingCondition}}">
+                                                <view class="weui-select">{{issuingCondition[issuingConditionIndex]}}</view>
+                                            </picker>
+                                        </view>
+                                        <view class="weui-cell__bd weui-cell__bd_in-select-before" wx:if="{{issuingConditionIndex==0}}">
+                                            <input class="weui-input" placeholder="x元" />
+                                        </view>
+                                        <view class="weui-cell__bd weui-cell__bd_in-select-before" wx:if="{{issuingConditionIndex==1}}">
+                                            <input class="weui-input" placeholder="x元" />
+                                        </view>
+                                        <view class="weui-cell__bd weui-cell__bd_in-select-before" wx:if="{{issuingConditionIndex==2}}">
+                                            <input class="weui-input" placeholder="x次" />
+                                        </view>
+                                    </view>
+                                </view>    
+                            </view>
+
+                            
+                            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                                <view class="weui-cells__title">选择随机分发群组</view>
+                                <view class="weui-cells weui-cells_after-title">
+                                    <view class="weui-cell weui-cell_select">
+                                        <view class="weui-cell__hd" style="width: 750rpx">
+                                            <picker bindchange="bindIssuingGroupChange" value="{{issuingGroupIndex}}" range="{{issuingGroup}}">
+                                                <view class="weui-select">{{issuingGroup[issuingGroupIndex]}}</view>
+                                            </picker>
+                                        </view>
+                                    </view>
+                                </view>    
+                            </view>
+
+
+                            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                                <view class="weui-cells__title">请输入用户ID</view>
+                                <view class="weui-cells weui-cells_after-title">
+                                    <view class="weui-cell weui-cell_select">
+                                        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                                            <input class="weui-input" placeholder="请在此输入用户ID" />
+                                        </view>
+                                    </view>
+                                </view>    
+                            </view>
+
+
+
+                        </view>
+                    </view>
+                    <button class="weui-btn" type="primary">确定发行</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

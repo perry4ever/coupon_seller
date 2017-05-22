@@ -1,0 +1,2 @@
+/* pages/starUser/starUser.wxss */
+@import "../coupon/detail/detail.wxss"
